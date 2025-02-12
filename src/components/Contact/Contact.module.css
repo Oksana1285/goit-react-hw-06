@@ -31,23 +31,17 @@
 }
 
 .buttonDelete {
-  width: 100px;
-  padding: 10px 15px;
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  gap: 5px;
-  border-radius: 60px;
-  background-color: #5d5252;
-  border: none;
-  color: #6e7caa;
-  box-shadow: 0 4px 4px #00000026;
-  font-size: 20px;
-  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #176eac;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
 
-.buttonDelete:hover {
-  background-color: #6b2525;
-  color: #e7cec5;
+.buttonDelete:hover .buttonDelete:focus {
+  border-color: #1019bd;
 }

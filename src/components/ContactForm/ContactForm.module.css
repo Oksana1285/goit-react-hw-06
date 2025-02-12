@@ -22,7 +22,6 @@
   border-style: none;
   border-radius: 8px;
   padding-block: 8px;
-  padding-inline: 12px;
 }
 
 .formInput:focus {
@@ -38,7 +37,7 @@
   position: absolute;
   top: 32px;
   left: 8px;
-  color: rgb(176, 31, 6);
+  color: rgb(209, 127, 39);
 }
 
 .formButton {

@@ -1,7 +1,11 @@
 body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: auto;
+  padding-top: 20px;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #bfbaba;
-  color: #1b1b1b;
+  background-color: #746868;
+  color: #383333;
 }
 
 a {
@@ -29,7 +33,23 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #176eac;
   cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #1019bd;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }

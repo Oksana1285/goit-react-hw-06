@@ -1,8 +1,13 @@
-import { BsPhone, BsPerson, BsTrash } from 'react-icons/bs';
+import { BsPerson } from 'react-icons/bs';
+import { deleteContact } from '../../redux/contactsSlice';
+import { useDispatch } from 'react-redux';
+import { MdPhoneInTalk } from 'react-icons/md';
 
 import css from './Contact.module.css';
 
-const Contact = ({ id, number, name, onDelete }) => {
+const Contact = ({ id, number, name }) => {
+  const dispatch = useDispatch();
+  const handleDelete = () => dispatch(deleteContact(id));
   return (
     <div className={css.contactContainer}>
       <div className={css.contactText}>
@@ -11,11 +16,16 @@ const Contact = ({ id, number, name, onDelete }) => {
           {name}
         </h2>
         <p className={css.contactNumber}>
-          <BsPhone size="22" />
-          {number}
+          <MdPhoneInTalk />
+          <a href={`tel: ` + number}>{number}</a>
         </p>
       </div>
-      <button className={css.buttonDelete} onClick={() => onDelete(id)}>
+      <button
+        className={css.buttonDelete}
+        onClick={handleDelete}
+        type="button"
+        aria-label="delete button"
+      >
         Delete
       </button>
     </div>
